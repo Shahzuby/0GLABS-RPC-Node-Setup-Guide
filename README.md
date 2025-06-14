@@ -190,6 +190,11 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
+# enable and start 0gchaind
+sudo systemctl daemon-reload
+sudo systemctl enable 0gchaind 0ggeth
+sudo systemctl restart 0gchaind 0ggeth
+sudo journalctl -u 0gchaind -u 0ggeth -f --no-hostname -o cat
 ```
 
 ```bash
