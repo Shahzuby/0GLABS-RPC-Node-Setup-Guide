@@ -5,17 +5,34 @@ This guide walks you through installing and running a **0GLABS NODE** on Ubuntu 
 
 ---
 
+Hardware Requirements (Recommended)
+32GB ram 
+1000GB ssd
+4CORES cpu
+100mbps internet
+
+---
+
 🌐 GCP Firewall Settings
 To allow proper communication, open these ports in your GCP VM firewall:
 
 GCP Steps:
-Go to VPC Network → Firewall rules.
-Click "Create firewall rule".
-Set a name (e.g., 0gchain-ports).
-Targets: Choose "All instances in the network" or specify your VM tag.
-Source IP ranges: 0.0.0.0/0
-Protocols and ports: Select "Specified protocols and ports" and add tcp:47303,47456,47457,47500,47545,47546,47551.
 
+Go to VPC Network → Firewall rules.
+
+Click "Create firewall rule".
+
+Set a name (e.g., 0gchain-ports).
+
+Targets: Choose "All instances in the network" or specify your VM tag.
+
+Source IP ranges: 0.0.0.0/0
+
+Protocols and ports: Select "Specified protocols and ports" and add
+
+tcp:47303,47456,47457,47500,47545,47546,47551.
+
+---
 
 ## 📦 Install Dependencies
 
