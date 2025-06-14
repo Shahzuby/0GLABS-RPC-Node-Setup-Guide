@@ -190,14 +190,7 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
-# enable and start 0gchaind
-sudo systemctl daemon-reload
-sudo systemctl enable 0gchaind 0ggeth
-sudo systemctl restart 0gchaind 0ggeth
-sudo journalctl -u 0gchaind -u 0ggeth -f --no-hostname -o cat
 ```
-
-After install you get error just ignore press cntrl+c and now follow next step
 
 ```bash
 sudo systemctl stop 0gchaind 0ggeth
@@ -22619,6 +22612,7 @@ sudo ufw allow ${OG_PORT}656/tcp comment 0g_p2p_port
 and now restart your node 
 
 ```bash
+# enable and start 0gchaind
 sudo systemctl daemon-reload
 sudo systemctl enable 0gchaind 0ggeth
 sudo systemctl restart 0gchaind 0ggeth
