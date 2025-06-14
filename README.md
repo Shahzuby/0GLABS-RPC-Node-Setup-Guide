@@ -22624,5 +22624,11 @@ sudo systemctl restart 0gchaind 0ggeth
 sudo journalctl -u 0gchaind -u 0ggeth -f --no-hostname -o cat
 ```
 
+how to use your private rpc very simple 
+
+https://yourvpsip:8545 
+
+add your rpc node ip in yourvpsip and just use on your 0glabs nano file 
+
 Made with ❤️ for the https://t.me/andhiiTGkamaii community.
 
