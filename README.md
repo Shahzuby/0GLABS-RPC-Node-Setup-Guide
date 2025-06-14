@@ -6,9 +6,13 @@ This guide walks you through installing and running a **0GLABS NODE** on Ubuntu 
 ---
 
 Hardware Requirements (Recommended)
+
 32GB ram 
+
 1000GB ssd
+
 4CORES cpu
+
 100mbps internet
 
 ---
