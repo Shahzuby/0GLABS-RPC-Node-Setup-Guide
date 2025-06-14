@@ -34,7 +34,9 @@ Source IP ranges: 0.0.0.0/0
 
 Protocols and ports: Select "Specified protocols and ports" and add
 
-tcp:47303,47456,47457,47500,47545,47546,47551.
+TCP:47303,47456,47457,47500,47545,47546,47551,656,303
+
+UDP:47303,47456,47457,47500,47545,47546,47551,656,303
 
 ---
 
@@ -22607,6 +22609,13 @@ now copy your key and delete all content and paste below content with your_key
 	]
 }
 ```
+
+```bash
+sudo ufw allow ${OG_PORT}303/tcp comment geth_p2p_port
+sudo ufw allow ${OG_PORT}303/udp comment geth_p2p_port
+sudo ufw allow ${OG_PORT}656/tcp comment 0g_p2p_port
+```
+
 and now restart your node 
 
 ```bash
@@ -22616,4 +22625,5 @@ sudo systemctl restart 0gchaind 0ggeth
 sudo journalctl -u 0gchaind -u 0ggeth -f --no-hostname -o cat
 ```
 
+Made with ❤️ for the https://t.me/andhiiTGkamaii community.
 
